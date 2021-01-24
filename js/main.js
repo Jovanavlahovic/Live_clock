@@ -76,7 +76,7 @@ function loadData() {
 
     getTime.then(data => {
         let response = JSON.parse(data);
-        day_of_week = response.day_of_week+1;
+        day_of_week = response.day_of_week;
         day_of_year = response.day_of_year;
         week_number = response.week_number;
         abbreviation = response.abbreviation;
@@ -131,8 +131,14 @@ function setDetails(){
 
     timezone.innerHTML = time_zone;
     dayOfYear.innerHTML = day_of_year;
-    dayOfWeek.innerHTML = day_of_week;
     weekNumber.innerHTML = week_number;
+
+    if(day_of_week == 0){
+        dayOfWeek.innerHTML = 7;
+    } else{
+        dayOfWeek.innerHTML = day_of_week + 1;
+    }
+
 }
 
 //toggles between displaying and hiding additional information about date and time
