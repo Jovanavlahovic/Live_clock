@@ -1,0 +1,272 @@
+@import 'vars';
+@import 'mixins';
+
+@include main;
+
+body{
+    height: 100vh;
+    width: 100vw;
+    font-size: 16px;
+}
+
+.container{
+    height: 100%;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+.dayTime{
+    background-image: $bg-image-l-day;
+    text-shadow: 0px 0px 5px rgb(41, 41, 41);
+}
+
+.nightTime{
+    background-image: $bg-image-l-night;
+}
+
+.quote-container{
+    position: absolute;
+    top: 13%;
+    left: 5%;
+    color: #fff;
+    width: 70%;
+
+    #quote{
+        font-size: 1.5rem;
+        padding-bottom: 1rem;
+    }
+
+    #refresh-quote, #author{
+       display: inline-block;
+    }
+    
+    #refresh-quote{
+        width: 1.4rem;
+        cursor: pointer;
+    }
+
+    #author{
+        margin-right: 1rem;
+    }
+
+    &.hide{
+        display: none;
+    }
+
+}
+
+.basic-display{
+    color: #fff;
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    
+    p{
+        font-size: 1.7rem;
+        display: inline-block;
+        
+    }
+
+    img{
+        height: 4vh;
+    }
+
+    .time{
+        font-size: 9rem;
+    }
+
+    &.top{
+        top: 10%;
+        height: 50%;
+    }
+}
+
+
+ #showMore{
+        width: 7rem;
+        height: 2.8rem;
+        border-radius: 2rem;
+        padding: 0.5rem;
+        background-color: #fff;
+        position: absolute;
+        bottom: 10%;
+        right:5%;
+        cursor: pointer;
+        z-index: 1111;
+        text-shadow: none;
+
+        &.top{
+            bottom: 62%;
+
+            img{
+                transform: rotate(180deg);
+            }
+        }
+
+        span, img{
+            position: absolute;
+            color: black;
+        }
+
+        img{
+          right: 5%;
+          bottom: 5%;
+        }
+
+        span{
+            left: 10%;
+            bottom: 30%;
+        }
+
+        &:hover{
+            box-shadow: 0 0 10px #fff;
+        }
+}
+
+.more-info{
+    background-color: #000;
+    opacity: 0.7;
+    height: 48%;
+    width: 100%;
+    position: absolute;
+    bottom: 0%;
+    padding: 4rem;
+    @include clearfix;
+
+    p, h2{
+        color: #fff;
+        
+    }
+
+    h2{
+        font-size: 2.5rem;
+        padding-top: .75rem;
+    }
+
+    #left{
+        float: left;
+        width: 50%;
+        border-right: 1px solid white;
+        height: 100%;
+    }
+
+    #right{
+        float: right;
+        width: 50%;
+        padding-left: 4rem;
+    }
+
+    #timezone, #dayOfWeek{
+        margin-bottom: 3rem;
+    }
+
+    &.hide{
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 800px){
+    .dayTime{
+        background-image: $bg-image-md-day;
+    }
+    .nightTime{
+        background-image: $bg-image-md-night;
+    }
+    .basic-display{
+        bottom: 20%;
+
+        p{
+            font-size: 1.4rem;
+        }
+
+        .time{
+            font-size: 7rem;
+        }
+
+        &.top{
+            top:8%;
+        }
+    }
+    .quote-container{
+        #quote{
+        font-size: 1.2rem;
+    }
+    }
+    #showMore{
+        left: 5%;
+
+         &.top{
+            bottom: 52%;
+         }
+    }
+    .more-info{
+        padding: 2.5rem;
+
+        h2{
+            font-size: 2rem;
+        }
+
+        #left{
+            width: 55%;
+        }
+
+        #right{
+            width: 45%;
+            padding-left: 2.5rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .dayTime{
+        background-image: $bg-image-xs-day;
+    }
+    .nightTime{
+        background-image: $bg-image-xs-night;
+    }
+    .basic-display{
+        p{
+            font-size: 1.2rem;
+        }
+    }
+    .quote-container{
+        #quote{
+            font-size: 1rem;
+        }
+    }
+    .more-info{
+        padding: 1.5rem;
+        h2, p{
+           display: inline-block;
+           width: 50%;
+           
+        }
+        p{
+            width: 40%;
+        }
+        h2{
+            text-align: right;
+            font-size: 1.5rem;
+            width: 58%;
+        }
+        #left, #right{
+            float: unset;
+            width: 100%;
+            border: none;
+            padding-left: unset;
+            height: 50%;
+        }
+    }
+    #showMore{
+        width: 6rem;
+
+        span{
+            font-size: .8rem;
+        }
+
+        img{
+            transform: scale(0.8);
+        }
+    }
+}

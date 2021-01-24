@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-size: 16px;
+}
+
+.container {
+  height: 100%;
+  background-size: 100% 100%;
+  position: relative;
+}
+
+.dayTime {
+  background-image: url("../assets/desktop/bg-image-daytime.jpg");
+  text-shadow: 0px 0px 5px #292929;
+}
+
+.nightTime {
+  background-image: url("../assets/desktop/bg-image-nighttime.jpg");
+}
+
+.quote-container {
+  position: absolute;
+  top: 13%;
+  left: 5%;
+  color: #fff;
+  width: 70%;
+}
+.quote-container #quote {
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+.quote-container #refresh-quote, .quote-container #author {
+  display: inline-block;
+}
+.quote-container #refresh-quote {
+  width: 1.4rem;
+  cursor: pointer;
+}
+.quote-container #author {
+  margin-right: 1rem;
+}
+.quote-container.hide {
+  display: none;
+}
+
+.basic-display {
+  color: #fff;
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+}
+.basic-display p {
+  font-size: 1.7rem;
+  display: inline-block;
+}
+.basic-display img {
+  height: 4vh;
+}
+.basic-display .time {
+  font-size: 9rem;
+}
+.basic-display.top {
+  top: 10%;
+  height: 50%;
+}
+
+#showMore {
+  width: 7rem;
+  height: 2.8rem;
+  border-radius: 2rem;
+  padding: 0.5rem;
+  background-color: #fff;
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  cursor: pointer;
+  z-index: 1111;
+  text-shadow: none;
+}
+#showMore.top {
+  bottom: 62%;
+}
+#showMore.top img {
+  transform: rotate(180deg);
+}
+#showMore span, #showMore img {
+  position: absolute;
+  color: black;
+}
+#showMore img {
+  right: 5%;
+  bottom: 5%;
+}
+#showMore span {
+  left: 10%;
+  bottom: 30%;
+}
+#showMore:hover {
+  box-shadow: 0 0 10px #fff;
+}
+
+.more-info {
+  background-color: #000;
+  opacity: 0.7;
+  height: 48%;
+  width: 100%;
+  position: absolute;
+  bottom: 0%;
+  padding: 4rem;
+}
+.more-info:before, .more-info:after {
+  content: "";
+  display: table;
+}
+.more-info:after {
+  clear: both;
+}
+.more-info p, .more-info h2 {
+  color: #fff;
+}
+.more-info h2 {
+  font-size: 2.5rem;
+  padding-top: 0.75rem;
+}
+.more-info #left {
+  float: left;
+  width: 50%;
+  border-right: 1px solid white;
+  height: 100%;
+}
+.more-info #right {
+  float: right;
+  width: 50%;
+  padding-left: 4rem;
+}
+.more-info #timezone, .more-info #dayOfWeek {
+  margin-bottom: 3rem;
+}
+.more-info.hide {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  .dayTime {
+    background-image: url("../assets/tablet/bg-image-daytime.jpg");
+  }
+
+  .nightTime {
+    background-image: url("../assets/tablet/bg-image-nighttime.jpg");
+  }
+
+  .basic-display {
+    bottom: 20%;
+  }
+  .basic-display p {
+    font-size: 1.4rem;
+  }
+  .basic-display .time {
+    font-size: 7rem;
+  }
+  .basic-display.top {
+    top: 8%;
+  }
+
+  .quote-container #quote {
+    font-size: 1.2rem;
+  }
+
+  #showMore {
+    left: 5%;
+  }
+  #showMore.top {
+    bottom: 52%;
+  }
+
+  .more-info {
+    padding: 2.5rem;
+  }
+  .more-info h2 {
+    font-size: 2rem;
+  }
+  .more-info #left {
+    width: 55%;
+  }
+  .more-info #right {
+    width: 45%;
+    padding-left: 2.5rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .dayTime {
+    background-image: url("../assets/mobile/bg-image-daytime.jpg");
+  }
+
+  .nightTime {
+    background-image: url("../assets/mobile/bg-image-nighttime.jpg");
+  }
+
+  .basic-display p {
+    font-size: 1.2rem;
+  }
+
+  .quote-container #quote {
+    font-size: 1rem;
+  }
+
+  .more-info {
+    padding: 1.5rem;
+  }
+  .more-info h2, .more-info p {
+    display: inline-block;
+    width: 50%;
+  }
+  .more-info p {
+    width: 40%;
+  }
+  .more-info h2 {
+    text-align: right;
+    font-size: 1.5rem;
+    width: 58%;
+  }
+  .more-info #left, .more-info #right {
+    float: unset;
+    width: 100%;
+    border: none;
+    padding-left: unset;
+    height: 50%;
+  }
+
+  #showMore {
+    width: 6rem;
+  }
+  #showMore span {
+    font-size: 0.8rem;
+  }
+  #showMore img {
+    transform: scale(0.8);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

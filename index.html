@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clock App</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./node_modules/animate.css/animate.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/main.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="quote-container">
+        <p id="quote" class="animate__animated animate__bounceInLeft animate__delay-1s"></p>
+        <p id="author" class="animate__animated animate__bounceInLeft animate__delay-1s"></p>
+        <img src="./assets/desktop/icon-refresh.svg" alt="refresh-quote" id="refresh-quote"  class="animate__animated animate__bounceInLeft animate__delay-1s">
+    </div>
+    <div class="basic-display animate__animated animate__bounceInUp animate__delay-1s">
+      <span><img src="" alt="" id="icon"></span>
+      <p class="greeting"></p>
+      <h1 class="time"></h1>
+      <p id="city"></p>
+    </div>
+    <div id="showMore" class="animate__animated animate__bounceInUp animate__delay-1s">
+        <span>MORE</span>
+        <img src="./assets/desktop/icon-arrow-up.svg" alt="icon-arrow-up">
+    </div>
+    <div class="more-info hide animate__animated animate__slideInUp">
+      <div id="left">
+        <p>CURRENT TIMEZONE</p>
+        <h2 id="timezone"></h2>
+        <p>DAY OF THE YEAR</p>
+        <h2 id="dayOfYear"></h2>
+      </div>
+      <div id="right">
+        <p>DAY OF THE WEEK</p>
+        <h2 id="dayOfWeek"></h2>
+        <p>WEEK NUMBER</p>
+        <h2 id="weekNumber"></h2>
+      </div>
+    </div>
+    </div>
+    
+</body>
+</html>
